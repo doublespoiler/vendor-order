@@ -31,7 +31,8 @@ namespace VendorOrder.Tests
     [TestMethod]
     public void GetName_ReturnsName_String()
     {
-    
+      string result = newVendor.Name;
+      Assert.AreEqual(name, result);
     }
 
   }
