@@ -10,12 +10,14 @@ namespace VendorOrder.Tests
   {
     public void Dispose()
     {
-      Record.ClearAll();
+      Vendor.ClearAll();
     }
     [TestMethod]
-    public void CategoryConstructor_CreatesInstanceOfCategory_Category()
+    public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-
+      string name = "Hello";
+      Vendor newVendor = new Vendor(name);
+      Assert.AreEqual(typeof(Vendor), newVendor.GetType());
     }
 
   }

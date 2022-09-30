@@ -10,13 +10,17 @@ namespace VendorOrder.Tests
   {
     public void Dispose()
     {
-      Record.ClearAll();
+      Order.ClearAll();
     }
-    // [TestMethod]
-    // public void CategoryConstructor_CreatesInstanceOfCategory_Category()
-    // {
-
-    // }
+    [TestMethod]
+    public void OrderConstructor_CreatesInstanceOfOrder_Order()
+    {
+      string item = "bread";
+      string description = "for bread";
+      DateTime date = new DateTime(2022, 09, 22);
+      Order newOrder = new Order(item, description, date);
+      Assert.AreEqual(typeof(Order), newOrder.GetType());
+    }
 
   }
 }
