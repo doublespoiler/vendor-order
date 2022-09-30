@@ -8,16 +8,30 @@ namespace VendorOrder.Tests
   [TestClass]
   public class VendorTests : IDisposable
   {
+    public Vendor newVendor;
+    public string name;
+
     public void Dispose()
     {
       Vendor.ClearAll();
     }
+
+    [TestInitialize]
+    public void TestInitialize()
+    {
+      name = "Arasaka";
+      newVendor = new Vendor(name);
+    }
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
     {
-      string name = "Hello";
-      Vendor newVendor = new Vendor(name);
       Assert.AreEqual(typeof(Vendor), newVendor.GetType());
+    }
+
+    [TestMethod]
+    public void GetName_ReturnsName_String()
+    {
+    
     }
 
   }
