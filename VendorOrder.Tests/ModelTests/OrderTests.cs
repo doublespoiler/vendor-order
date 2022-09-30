@@ -12,10 +12,10 @@ namespace VendorOrder.Tests
     public Order orderTwo;
     public List<Order> orderList;
     public DateTime date;
-    public string item;
-    public string description;
-    public int amount;
-    public double cost;
+    public string itemOne;
+    public string descriptionOne;
+    public int amountOne;
+    public double costOne;
     public void Dispose()
     {
       Order.ClearAll();
@@ -23,17 +23,24 @@ namespace VendorOrder.Tests
     [TestInitialize]
     public void TestInitialize()
     {
-      item = "Sandevistan";
-      description = "REDACTED";
-      amount = 2;
-      cost = 12999.98;
+      itemOne = "Sandevistan";
+      descriptionOne = "REDACTED";
+      amountOne = 2;
+      costOne = 12999.98;
       DateTime date = new DateTime(2077, 09, 30);
-      orderOne = new Order(item, description, amount, cost, date);
+      orderOne = new Order(itemOne, descriptionOne, amountOne, costOne, date);
     }
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
       Assert.AreEqual(typeof(Order), orderOne.GetType());
+    }
+
+    [TestMethod]
+    public void GetitemOne_ReturnsitemOne_String()
+    {
+      string result = orderOne.Item;
+      Assert.AreEqual(itemOne, result);
     }
 
   }
