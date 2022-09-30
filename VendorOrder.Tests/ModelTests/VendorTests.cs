@@ -55,11 +55,12 @@ namespace VendorOrder.Tests
       Assert.AreEqual(1, result);
     }
 
-    // [TestMethod]
-    // public void Find_ReturnsCorrectVendor_Vendor()
-    // {
-      
-    // }
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      Vendor result = Vendor.Find(2);
+      Assert.AreEqual(vendorTwo, result);
+    }
 
   }
 }
