@@ -8,18 +8,32 @@ namespace VendorOrder.Tests
   [TestClass]
   public class OrderTests : IDisposable
   {
+    public Order orderOne;
+    public Order orderTwo;
+    public List<Order> orderList;
+    public DateTime date;
+    public string item;
+    public string description;
+    public int amount;
+    public double cost;
     public void Dispose()
     {
       Order.ClearAll();
     }
+    [TestInitialize]
+    public void TestInitialize()
+    {
+      item = "Sandevistan";
+      description = "REDACTED";
+      amount = 2;
+      cost = 12999.98;
+      DateTime date = new DateTime(2077, 09, 30);
+      orderOne = new Order(item, description, amount, cost, date);
+    }
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      string item = "bread";
-      string description = "for bread";
-      DateTime date = new DateTime(2022, 09, 22);
-      Order newOrder = new Order(item, description, date);
-      Assert.AreEqual(typeof(Order), newOrder.GetType());
+      Assert.AreEqual(typeof(Order), orderOne.GetType());
     }
 
   }
