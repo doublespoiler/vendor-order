@@ -35,5 +35,16 @@ namespace VendorOrder.Tests
       Assert.AreEqual(name, result);
     }
 
+    [TestMethod]
+    public void GetAll_Returns_List()
+    {
+      string nameTwo = "Militech";
+      Vendor vendorTwo = new Vendor(nameTwo);
+      List<Vendor> newList = new List<Vendor> { newVendor, vendorTwo};
+
+      List<Vendor> result =  Vendor.GetAll();
+      CollectionAssert.AreEqual(newList, result);
+    }
+
   }
 }
