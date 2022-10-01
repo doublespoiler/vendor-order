@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using VendorOrder.Models;
 
 
 namespace VendorOrder.Controllers
@@ -19,12 +21,6 @@ namespace VendorOrder.Controllers
 
     [HttpPost("/vendors/{id}/orders")]
     public ActionResult Create()
-    {
-      return View();
-    }
-
-    [HttpGet("/vendors/{id}/orders/{id}")]
-    public ActionResult Show()
     {
       return View();
     }

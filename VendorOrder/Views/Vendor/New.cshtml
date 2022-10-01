@@ -1,3 +1,13 @@
 @{
   Layout = "_Layout";
 }
+@using VendorOrder.Models;
+
+<div id="bodycontent">
+  <h1>Add a Vendor</h1>
+  <form action="/vendors" method="post">
+    <label for="vendorName">Vendor Name</label>
+    <input for="vendorName" id="vendorName" type="text">
+    <button type="submit">Add</button>
+  </form>
+</div>
