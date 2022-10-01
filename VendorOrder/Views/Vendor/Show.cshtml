@@ -6,15 +6,11 @@
 
 <h3>@Model["vendor"].Name</h3>
 <a href='/vendors/@Model["vendor"].Id/orders/new'><button type="button">New Order</button></a>
+<ul>
+  @foreach(Order order in @Model["orders"])
+  {
+    <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>Order @order.Id</a> - @order.Item - @order.Date.ToShortDateString()</li>
+  }
+</ul>
 
-@foreach(Order order in @Model["orders"])
-{
-  <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>Order No. @order.Id</a> - @order.Item</li>
-  <ul>
-    <li>Description: @order.Description</li>
-    <li>Amount: @order.Amount</li>
-    <li>Cost per: @order.Cost</li>
-    <li>Ordered Placed: @order.Date</li>
-  </ul>
-}
 

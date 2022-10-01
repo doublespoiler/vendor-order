@@ -1,3 +1,17 @@
 @{
   Layout = "_Layout";
 }
+
+@using System.Globalization;
+@using VendorOrder.Models;
+
+<h3>Order @Model["order"].Id - @Model["order"].Item</h3>
+<ul>
+  <li>Vendor: @Model["vendor"].Name</li>
+  <li>Ordered Placed: @Model["order"].Date.ToShortDateString()</li>
+  <li>Description: @Model["order"].Description</li>
+  <li>Amount: @Model["order"].Amount</li>
+  <li>Cost per: @Model["order"].Cost.ToString("C", CultureInfo.CurrentCulture)</li>
+  <li>Total Cost: @((@Model["order"].Amount * @Model["order"].Cost).ToString("C", CultureInfo.CurrentCulture))</li>
+</ul>
+<a href='/vendors/@Model["vendor"].Id'><button>Back to @Model["vendor"].Name</button></a>
