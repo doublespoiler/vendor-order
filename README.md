@@ -1,37 +1,56 @@
-# _{Application Name}_
+# VenderOrder Tracker
 
-#### By _**{List of contributors}**_
+#### By Skylan Lew
 
-#### _{Brief description of application}_
+#### Independent Project 8 for Epicodus
 
 ## Technologies Used
 
-- _List all_
-- _the major technologies_
-- _you used in your project_
-- _here_
+- C#
+- .NET 5
+- ASP.NET Core MVC
+- Javascript
+- HTML
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+This web application allows the user to keep a list of vendors, as well as a list of orders for each vendor. The web app is themed around [Pierre's Bakery](https://github.com/doublespoiler/pierres-bakery).
+
+Along the top navbar, the user can log out (go to the splash screen), or go back to the all vendors list.
+
+Upon opening the splash page, the user can click the button to enter the app. They will be greeted by an empty list of Vendors, prompting them to add a vendor. Upon filling out the form, they are redirected to the vendor list, where they can add another vendor, or look at a vendor's details.
+
+When they click on a vendor's details, they are prompted to add an order for the vendor. Upon submitting the form, they are taken back to the vendor's list of orders, and can choose to view an order's details, or go back to the vendor page.
+
+The application will continue to store all lists until the server is turned off.
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+### Requires
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this application depends on? We recommend deleting the project from your desktop, re-cloning the project from GitHub, and writing down all the steps necessary to get the project working again.}_
+- [.NET 5](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) - <https://dotnet.microsoft.com/en-us/download/dotnet/5.0>
+
+### Download/Run Instructions (git)
+
+- clone: `$ git clone https://github.com/doublespoiler/vendor-order.git` or Code>Download ZIP
+- navigate to project folder: `$ cd VendorOrder.Solution/VendorOrder`
+- restore: `$ dotnet restore`
+- build: `$ dotnet build`
+- run: `$ dotnet run`
+
+### Test Instructions (git)
+
+- clone: `$ git clone https://github.com/doublespoiler/vendor-order.git` or Code>Download ZIP
+- navigate to test folder: `$ cd VendorOrder.Solution/VendorOrder.Tests`
+- test: `$ dotnet test`
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+- Randomized images doesn't work on `Order New` and `Order Show` routes
 
 ## License
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+[MIT](https://choosealicense.com/licenses/mit/)
+`[MIT](https://choosealicense.com/licenses/mit/)`
 
-Copyright (c) _date_ _author name(s)_
+Copyright (c) 2022 Skylan Lew
