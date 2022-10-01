@@ -6,5 +6,13 @@ function myClock() {
     myClock();             
   }, 1000)
 }
+
+function randomBg(){
+  const images = ['../images/bread1.jpg', '../images/bread2.jpg', '../images/bread3.jpg', '../images/bread4.jpg'];
+  const body = document.getElementById("bodycontent");
+  body.style.backgroundImage = 'url(' + images[Math.floor(Math.random() * images.length)] + ')';
+}
+
  
-Window.addEventListener("load", myClock());
+window.addEventListener("DOMContentLoaded", myClock());
+window.addEventListener("DOMContentLoaded", randomBg());
