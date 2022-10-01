@@ -8,10 +8,13 @@
     <script src="~/js/scripts.js"></script>
   </head>
   <body>
-    @await Html.PartialAsync("Header")
+   
     <div id="bodycontent">
-      @RenderBody()
+      @await Html.PartialAsync("Header")
+      <div id="renderbody">@RenderBody()</div>
+      @await Html.PartialAsync("Footer")
     </div>
-    @await Html.PartialAsync("Footer")
+    
+    
   </body>
 </html>

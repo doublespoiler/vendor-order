@@ -5,6 +5,7 @@
 @using VendorOrder.Models;
 
 <h3>@Model["vendor"].Name</h3>
+<a href='/vendors/@Model["vendor"].Id/orders/new'><button type="button">New Order</button></a>
 
 @foreach(Order order in @Model["orders"])
 {
@@ -17,4 +18,3 @@
   </ul>
 }
 
-<a href='/vendors/@Model["vendor"].Id/orders/new'><button type="button">New Order</button></a>
