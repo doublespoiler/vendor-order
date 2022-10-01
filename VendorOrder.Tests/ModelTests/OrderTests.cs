@@ -54,7 +54,7 @@ namespace VendorOrder.Tests
     }
 
     [TestMethod]
-    public void GetAll_Returns_List()
+    public void GetAll_ReturnsList_List()
     {
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(orderList, result);

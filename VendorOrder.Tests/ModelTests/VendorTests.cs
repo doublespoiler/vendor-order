@@ -62,5 +62,21 @@ namespace VendorOrder.Tests
       Assert.AreEqual(vendorTwo, result);
     }
 
+    [TestMethod]
+    public void AddOrder_AssociateOrderWithCategory_OrderList()
+    {
+      string itemOne = "Sandevistan";
+      string descriptionOne = "REDACTED";
+      int amountOne = 2;
+      double costOne = 12999.98;
+      DateTime date = new DateTime(2077, 09, 30);
+      Order orderOne = new Order(itemOne, descriptionOne, amountOne, costOne, date);
+      List<Order> newList = new List<Order> { orderOne };
+
+      vendorOne.AddOrder(orderOne);
+
+      List<Order> result = vendorOne.Orders;
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
