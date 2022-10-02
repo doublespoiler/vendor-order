@@ -45,20 +45,17 @@ namespace VendorOrder.Tests
     {
       Assert.AreEqual(typeof(Order), orderOne.GetType());
     }
-
     [TestMethod]
     public void GetitemOne_ReturnsitemOne_String()
     {
       string result = orderOne.Item;
       Assert.AreEqual(itemOne, result);
     }
-
     [TestMethod]
     public void GetAll_ReturnsList_List()
     {
       List<Order> result = Order.GetAll();
       CollectionAssert.AreEqual(orderList, result);
     }
-
   }
 }

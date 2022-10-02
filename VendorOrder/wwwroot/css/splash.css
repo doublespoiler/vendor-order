@@ -1,3 +1,25 @@
+body{
+  color: white;
+}
+
+button{
+  background-color: #333;
+  color: #fff;
+  border-color: #fff;
+}
+
+.jumbotron{
+  transform: translateY(40%);
+  width:60%;
+  margin: auto;
+  background-color: orangered;
+}
+
+#bodycontent{
+  height:100vh;
+  background-size: 100vw;
+}
+
 #header {
   position: fixed;
   top: 0px;
@@ -9,6 +31,7 @@
   height: 5vh;
   padding-left: 0.5em;
 }
+
 #footer {
   position: fixed;
   bottom: 0px;
@@ -20,24 +43,3 @@
   padding-left: 0.5em;
 }
 
-#bodycontent{
-  height:100vh;
-  background-size: 100vw;
-}
-
-.jumbotron{
-  transform: translateY(40%);
-  width:60%;
-  margin: auto;
-  background-color: orangered;
-}
-
-body{
-  color: white;
-}
-
-button{
-  background-color: #333;
-  color: #fff;
-  border-color: #fff;
-}

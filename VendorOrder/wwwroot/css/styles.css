@@ -1,3 +1,17 @@
+body{
+  color: #fff;
+}
+
+a, a:visited, a:hover{
+  color: #fff;
+}
+
+button{
+  background-color: #222;
+  color: #fff;
+  border-color: #fff;
+}
+
 #bodycontent{
   height:100vh;
   width: 100%;
@@ -10,6 +24,7 @@
   padding-left: 0.5em;
   background-color: orangered;
 }
+
 #renderbody{
   overflow-y:scroll;
   height: 90vh;
@@ -27,18 +42,3 @@
   background-color: orangered;
   height: 5vh;
 }
-
-a, a:visited, a:hover{
-  color: #fff;
-}
-
-body{
-  color: #fff;
-}
-
-button{
-  background-color: #222;
-  color: #fff;
-  border-color: #fff;
-}
-

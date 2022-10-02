@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using VendorOrder.Models;
 
-
 namespace VendorOrder.Controllers
 {
   public class OrderController : Controller
@@ -12,7 +11,6 @@ namespace VendorOrder.Controllers
     {
       return View();
     }
-
     [HttpGet("/vendors/{id}/orders/new")]
     public ActionResult New(int id)
     {
@@ -30,6 +28,5 @@ namespace VendorOrder.Controllers
       model.Add("vendor", vendor);
       return View(model);
     }
-
   }
 }

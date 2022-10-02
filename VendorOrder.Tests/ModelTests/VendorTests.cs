@@ -18,7 +18,6 @@ namespace VendorOrder.Tests
     {
       Vendor.ClearAll();
     }
-
     [TestInitialize]
     public void TestInitialize()
     {
@@ -33,35 +32,30 @@ namespace VendorOrder.Tests
     {
       Assert.AreEqual(typeof(Vendor), vendorOne.GetType());
     }
-
     [TestMethod]
     public void GetName_ReturnsName_String()
     {
       string result = vendorOne.Name;
       Assert.AreEqual(nameOne, result);
     }
-
     [TestMethod]
     public void GetAll_Returns_List()
     {
       List<Vendor> result =  Vendor.GetAll();
       CollectionAssert.AreEqual(vendorList, result);
     }
-
     [TestMethod]
     public void GetId_ReturnsVendorId_Int()
     {
       int result = vendorOne.Id;
       Assert.AreEqual(1, result);
     }
-
     [TestMethod]
     public void Find_ReturnsCorrectVendor_Vendor()
     {
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(vendorTwo, result);
     }
-
     [TestMethod]
     public void AddOrder_AssociateOrderWithCategory_OrderList()
     {
@@ -72,9 +66,7 @@ namespace VendorOrder.Tests
       DateTime date = new DateTime(2077, 09, 30);
       Order orderOne = new Order(itemOne, descriptionOne, amountOne, costOne, date);
       List<Order> newList = new List<Order> { orderOne };
-
       vendorOne.AddOrder(orderOne);
-
       List<Order> result = vendorOne.Orders;
       CollectionAssert.AreEqual(newList, result);
     }
