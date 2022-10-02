@@ -3,7 +3,7 @@
   top: 0px;
   left: 0px;
   width: 100%;
-  color: #ccc;
+  color: #fff;
   background: #333;
   margin-bottom: 200px;
   height: 5vh;
@@ -14,7 +14,7 @@
   bottom: 0px;
   left: 0px;
   width: 100%;
-  color: #ccc;
+  color: #fff;
   background: #333;
   height: 5vh;
   padding-left: 0.5em;
@@ -25,10 +25,19 @@
   background-size: 100vw;
 }
 
-
 .jumbotron{
   transform: translateY(40%);
   width:60%;
   margin: auto;
   background-color: orangered;
+}
+
+body{
+  color: white;
+}
+
+button{
+  background-color: #333;
+  color: #fff;
+  border-color: #fff;
 }

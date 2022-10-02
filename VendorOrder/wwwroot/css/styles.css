@@ -18,6 +18,7 @@
   margin: auto;
   padding-left:1em;
   padding-right:1em;
+
 }#footer {
   width: 100%;
   top: 95vh;
@@ -27,4 +28,17 @@
   height: 5vh;
 }
 
+a, a:visited, a:hover{
+  color: #fff;
+}
+
+body{
+  color: #fff;
+}
+
+button{
+  background-color: #222;
+  color: #fff;
+  border-color: #fff;
+}
 
